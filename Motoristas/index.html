@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./imagenes/motorista.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/ed75703f0c.js" crossorigin="anonymous"></script>
+<title>Wizzy Repartidores</title>
+</head>
+<body>
+    <section class="sign-in-screen" id="sign-in-screen">
+        <div class="row1">
+            <div>
+            </div>
+            <div>
+                <img style="height: 55px; width:55px" src="./imagenes/logo1.png" alt="" srcset="">
+            </div>
+        </div>
+        <div>
+            <h1 style="margin: 25px; font-size:xx-large; ">INICIAR SESIÓN</h1>
+        </div>
+            <form class="sign-in-form">
+                <div class="mb-3">
+                    <labe  for="exampleInputEmail1" class="form-label">Usuario</labe>
+                    <input type="tex" class="form-control" id="user" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password">
+                    <div id="emailHelp" class="form-text">Olvidé mi contraseña</div>
+                </div>
+                <div>
+                    <div onclick="verificarUsuario()" class="sign-in-button">Iniciar sesión</div>
+                </div> 
+                
+            </form>
+        <div class="continuar-con">
+            
+        </div>
+        <div class="nueva-cuenta" onclick="crearCuenta()">
+            <h5>Crear nueva cuenta</h5>
+        </div>
+    </section>
+
+    <section class="new-acc oculto" id="new-acc"> 
+        <div class="row1">
+            <div onclick="back('new-acc','sign-in-screen')">
+                <i class="fa-solid fa-circle-arrow-left fa-3x"></i>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div>
+            <h1 style="margin: 25px; font-size:xx-large; ">REGISTRARSE</h1>
+        </div>
+            <form class="sign-in-form">
+                <div class="mb-3">
+                    <labe  for="exampleInputEmail1" class="form-label">Usuario</labe>
+                    <input type="email" class="form-control" id="newuser" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="newpsw">
+                    <div id="emailHelp" class="form-text">Debe contener más de 4 digitos</div>
+                </div>
+                <div>
+                    <div onclick="crearNuevaCuenta()" class="sign-in-button">Crear Cuenta</div>
+                </div>  
+            </form>
+        <div class="nueva-cuenta" onclick="back('new-acc','sign-in-screen')">
+            <h5>¿Ya tienes una cuenta?</h5> 
+        </div>
+    </section>
+
+    <section class="ordenes-disponibles-screen oculto" id="ordenes-disponibles-screen">
+        <div class="row1">
+            <div>
+                
+            </div>
+            <div>
+            </div>
+            <div>
+                <img style="height: 55px; width:55px" src="./imagenes/motorista.png" alt="" srcset="">
+            </div>
+        </div>
+        
+        <div class="ordenes-disponibles-container">
+            <h1>ORDENES DISPONIBLES</h1>
+            <div class="ordenesD" id="ordenesD">
+                
+            </div>
+        </div>
+        <nav class="nav-menu">
+            <div class="home-icon">
+                <i class="fa-solid fa-house-fire fa-2x"  onclick="homeButton('ordenes-disponibles-screen')"></i>
+            </div>
+            <div class="notification-icon">
+                <i class="fa-solid fa-person-running fa-2x" onclick="runningButton('ordenes-disponibles-screen')"></i>
+            </div>
+            <div class="cart-icon">
+                <i class="fa-solid fa-square-check fa-2x" onclick="checkButton('ordenes-disponibles-screen')"></i>
+            </div>
+            <div>
+                <i class="fa-solid fa-user fa-2x" onclick="profileButton('ordenes-disponibles-screen')"></i>
+            </div>
+        </nav>
+        </section>
+
+    <section class="ordenes-por-entregar-screen oculto" id="ordenes-por-entregar-screen">
+            <div class="row1">
+                <div>
+                </div>
+                <div>
+                </div>
+                <div>
+                    <img style="height: 55px; width:55px" src="./imagenes/motorista.png" alt="" srcset="">
+                </div>
+            </div>
+            
+            <div class="ordenesPE-container">
+                <h1>ORDENES POR ENTREGAR</h1>
+                <div class="ordenesPE" id="ordenesPE">
+                     
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <div class="home-icon">
+                    <i class="fa-solid fa-house-fire fa-2x"  onclick="homeButton('ordenes-por-entregar-screen')"></i>
+                </div>
+                <div class="notification-icon">
+                    <i class="fa-solid fa-person-running fa-2x" onclick="runningButton('ordenes-por-entregar-screen')"></i>
+                </div>
+                <div class="cart-icon">
+                    <i class="fa-solid fa-square-check fa-2x" onclick="checkButton('ordenes-por-entregar-screen')"></i>
+                </div>
+                <div>
+                    <i class="fa-solid fa-user fa-2x" onclick="profileButton('ordenes-por-entregar-screen')"></i>
+                </div>
+            </nav>
+            </section>
+    <section class="ordenes-entregadas-screen oculto" id="ordenes-entregadas-screen">
+            <div class="row1">
+                    <div>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                        <img style="height: 55px; width:55px" src="./imagenes/motorista.png" alt="" srcset="">
+                    </div>
+                </div>
+                
+                <div class="ordenes-entregadas-container">
+                    <h1>ORDENES ENTREGADAS</h1>
+                    <div class="ordenesE" id="ordenesE">
+                         
+                    </div>
+                </div>
+                <nav class="nav-menu">
+                    <div class="home-icon">
+                        <i class="fa-solid fa-house-fire fa-2x"  onclick="homeButton('ordenes-disponibles-screen')"></i>
+                    </div>
+                    <div class="notification-icon">
+                        <i class="fa-solid fa-person-running fa-2x" onclick="runningButton('ordenes-disponibles-screen')"></i>
+                    </div>
+                    <div class="cart-icon">
+                        <i class="fa-solid fa-square-check fa-2x" onclick="checkButton('ordenes-disponibles-screen')"></i>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-user fa-2x" onclick="profileButton('ordenes-entregadas-screen')"></i>
+                    </div>
+                </nav>
+                </section>  
+                
+    <section class="profile-screen oculto" id="profile-screen">
+                    <div class="row1">
+                        <div onclick="back('profile-screen','shops-screen')">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </div>
+                        <div>
+                            <img style="height: 55px; width:55px" src="./imagenes/logo1.png" alt="" srcset="">
+                        </div>
+                    </div>
+                    <div class="info-perfil" id="info-perfil">
+                    </div>
+
+                    <nav class="nav-menu">
+                        <div class="home-icon">
+                            <i class="fa-solid fa-house fa-2x"  onclick="homeButton('profile-screen')"></i>
+                        </div>
+                        <div class="notification-icon">
+                            <i class="fa-solid fa-bell fa-2x" onclick="notificationButton('profile-screen')"></i>
+                        </div>
+                        <div class="cart-icon">
+                            
+                            <i class="fa-solid fa-cart-shopping fa-2x" onclick="cartButton('profile-screen')"></i>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-user fa-2x activo" onclick="profileButton('profile-screen')"></i>
+                        </div>
+                    </nav>
+    </section>
+
+    <script src="./js/controlador.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>
